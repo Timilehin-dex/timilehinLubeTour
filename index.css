@@ -15,6 +15,10 @@ header {
   font-size: 18px;
   transform: scale(1.2);
 }
+header h2 {
+  font-size: 32px;
+  font-weight: 700;
+}
 .nlink {
   color: rgb(118, 118, 118);
   transition: 0.3s;
@@ -25,6 +29,26 @@ header {
 }
 .nlink-active {
   color: black;
+}
+.hmenu a {
+  display: none;
+  font-size: 24px;
+  color: black;
+  background-color: rgb(238, 240, 242);
+  padding: 3px;
+  margin-left: 5px;
+  border-radius: 20px;
+}
+@media (min-width: 300px) and (max-width: 900px) {
+  header h2 {
+    margin-inline-end: auto;
+  }
+  nav {
+    display: none;
+  }
+  .hmenu a {
+    display: block;
+  }
 }
 .first h1 {
   margin-bottom: 12px;
@@ -45,11 +69,11 @@ header {
   margin-top: 32px;
   width: 75%;
   border-radius: 24px;
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 .first img:hover {
   transform: scale(1.02);
-  box-shadow: black;
+  box-shadow: 0px 30px rgba(0, 0, 0, 0.05);
 }
 .second {
   padding-bottom: 140px;
@@ -68,6 +92,9 @@ header {
   font-size: 24px;
   transition: 0.3s;
   padding: 7px 25px;
+}
+.second .downloadone:hover {
+  transform: scale(1.1);
 }
 footer {
   padding: 0 64px 64px 64px;
@@ -91,11 +118,60 @@ footer ul {
   padding: 0;
 }
 footer ul li {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 400;
   padding: 8px 0;
   color: rgb(118, 118, 118);
+  transition: 0.3s;
+  cursor: pointer;
+}
+footer ul li:hover {
+  transform: scale(1.1);
 }
 footer ul li:first-child {
   padding-top: 0;
+}
+.wfooter {
+  padding: 112px 108px;
+  border-top: 0.5px solid grey;
+}
+@media (min-width: 300px) and (max-width: 991.98px) {
+  .second h1 {
+    font-size: 55px;
+    font-weight: 900;
+    padding: 0 15%;
+  }
+  .first p {
+    font-size: 26px;
+    padding: 0 20%;
+  }
+}
+@media (min-width: 300px) and (max-width: 900px) {
+  .first h1 {
+    font-size: 55px;
+    font-weight: 900;
+  }
+  .first p {
+    font-size: 22px;
+    padding: 0 15%;
+  }
+  .first img {
+    width: 100%;
+  }
+  .second h1 {
+    margin-bottom: 48px;
+    font-size: 40px;
+    font-weight: 800;
+    padding: 0 12%;
+  }
+  .wfooter {
+    padding: 0;
+  }
+  .lfooter {
+    flex-direction: column;
+    text-align: center;
+  }
+  .lfooter .one {
+    padding: 20px;
+  }
 }
