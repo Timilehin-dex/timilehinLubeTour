@@ -30,8 +30,10 @@ header h2 {
 .nlink-active {
   color: black;
 }
-.hmenu a {
+.hmenu {
   display: none;
+}
+.hmenu a {
   font-size: 24px;
   color: black;
   background-color: rgb(238, 240, 242);
@@ -46,7 +48,7 @@ header h2 {
   nav {
     display: none;
   }
-  .hmenu a {
+  .hmenu {
     display: block;
   }
 }
